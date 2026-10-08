@@ -1,0 +1,301 @@
+Here is the fully expanded, comprehensive decision-tree architecture for the entire course. Every tree incorporates the precise procedural branches, governing legal tests, landmark cases, failure states, and hidden exam traps from the lectures and study guides.
+
+---
+
+### **1. Contract Formation: The Enforceable Promise Decision Algorithm**
+
+```text
+[START: Alleged Promise / Transaction]
+       │
+       ▼
+[GATEWAY 1: MUTUAL ASSENT (Offer & Acceptance)]
+ ├── STEP 1A: Is there a Valid Offer?
+ │    ├── Did the communication manifest an objective willingness to be bound?
+ │    ├── Were essential terms reasonably certain and definite?
+ │    ├─ NO ──► INVITATION TO MAKE AN OFFER ONLY (e.g., school bulletin, catalog)
+ │    │         └── Application + fee constitutes the offer; school retains fee as acceptance (*Steinberg v. Chicago Med. Sch.*).
+ │    └─ YES ─► Valid Offer Created. Power of acceptance is vested in offeree.
+ │
+ ├── STEP 1B: Was the Power of Acceptance Terminated Before Acceptance?
+ │    ├── Revocation by offeror before acceptance takes effect?
+ │    ├── Rejection or Counter-Offer by offeree? (Mirror image rule: accepting only 250 of 500 terms = counter-offer)
+ │    ├── Death of offeror?
+ │    ├── Offeree learns of facts inconsistent with the offer? (e.g., offered land swallowed by a sinkhole)
+ │    ├─ YES ─► POWER TERMINATED ──► [NO CONTRACT CAN FORM]
+ │    └─ NO  ─► Proceed to Step 1C
+ │
+ └── STEP 1C: Was there Proper, Timely Acceptance?
+      ├── Contract forms PRECISELY at the moment of acceptance.
+      ├── Check Mode Invited by Offeror:
+      │    ├── UNILATERAL: Offer invites acceptance ONLY by performance/action.
+      │    └── BILATERAL: Offer expressly invites acceptance by a RETURN PROMISE.
+      │         └── EXAM TRAP (Microwave Tower Example): If an offer expressly requires a promise, 
+      │             secretly performing the work without communicating the promise yields US$0 contract damages!
+      ├─ NO ──► [NO CONTRACT]
+      └─ YES ─► Mutual Assent Established. Proceed to Gateway 2.
+       │
+       ▼
+[GATEWAY 2: CONSIDERATION (Bargained-for Exchange)]
+ ├── Did promisee suffer a legal detriment / confer a benefit in exchange for the promise?
+ ├── Is consideration "valuable" in the eyes of the law? (Payment of $15 application fee is valid consideration for the promise to evaluate by published criteria).
+ ├── EXAM TRAPS:
+ │    ├── Pre-existing Duty: Performing what one was already legally obligated to do ≠ consideration.
+ │    ├── Past Consideration: An act done before the promise was made is NO consideration (*Chicago Coliseum v. Dempsey*).
+ ├─ NO ──► Check PROMISSORY ESTOPPEL: Did promisee reasonably and foreseeably rely to their substantial detriment?
+ │         ├─ NO  ──► UNENFORCEABLE NUDE PROMISE (*Nudum Pactum*)
+ │         └─ YES ──► Enforceable under Equity (Damages strictly limited to reliance).
+ └─ YES ─► Consideration Established. Proceed to Gateway 3.
+       │
+       ▼
+[GATEWAY 3: CAPACITY]
+ ├── Did either party lack legal capacity (infancy/minor, mental defect, extreme intoxication)?
+ ├─ YES ──► CONTRACT VOIDABLE at the option of the incapacitated party.
+ └─ NO  ──► Capacity Established. Proceed to Gateway 4.
+       │
+       ▼
+[GATEWAY 4: LEGALITY OF OBJECT]
+ ├── Is the object, performance, or effect illegal, criminal, or contrary to public policy?
+ ├─ YES ──► VOID AB INITIO (*In Pari Delicto*: The court leaves parties where found; no reliance/expectation damages granted for bribes, murder, or illegal acts).
+ └─ NO  ──► [FULLY BINDING, ENFORCEABLE CONTRACT FORMED]
+```
+
+---
+
+### **2. Contract Breach & Remedy Selector Decision Tree**
+
+```text
+[START: Enforceable Contract + Unexcused Breach Established]
+       │
+       ▼
+[LEVEL 1: EXPECTATION DAMAGES (Primary Default Measure)]
+ Goal: Put injured party in the financial position they would have occupied HAD THE PROMISE BEEN KEPT.
+ ├── First Measure: Cost of Completion / Performance (favored when measurable, e.g., $30 to hire a replacement mower).
+ ├── Second Measure: Difference in Value (Position Promised B minus Position Delivered A).
+ │
+ ├── APPLY MANDATORY COMMON-LAW LIMITATIONS:
+ │    ├── 1. REASONABLE CERTAINTY (*Ericson v. Playgirl*):
+ │    │    ├── Are damages provable with reasonable certainty, or speculative/conjectural?
+ │    │    ├── New Business Rule: Lack of profit track record makes future lost profits unrecoverable.
+ │    │    └── General Publicity Trap: Loss of general fame/notoriety from missing a magazine cover or review is wholly speculative unless directly tied to professional earning capacity (*Ericson*).
+ │    │
+ │    ├── 2. FORESEEABILITY (*Hadley v. Baxendale*):
+ │    │    └── Measured AT THE TIME OF CONTRACTING (not post-breach). Consequential losses (e.g., spoiled dinner party, taking high-interest loans for college tuition) must be foreseeable to both parties.
+ │    │
+ │    ├── 3. MITIGATION OF DAMAGES:
+ │    │    └── Plaintiff cannot recover for avoidable losses; must make reasonable efforts to find substitute transactions.
+ │    │
+ │    └── 4. AMERICAN RULE (COSTS OF SUIT):
+ │         └── Victims pay their own attorneys' fees and court costs, leaving net recovery less than "whole".
+ │
+ ├─ PASSES ALL LIMITATIONS ──► AWARD COMPENSATORY EXPECTATION DAMAGES
+ └─ FAILS CERTAINTY / FORESEEABILITY ──► Drop down to Level 2.
+       │
+       ▼
+[LEVEL 2: RELIANCE DAMAGES (Alternative Backward-Looking Measure)]
+ Goal: Restore injured party to the financial position they occupied BEFORE THE PROMISE WAS MADE.
+ ├── Reimburses out-of-pocket expenses and costs incurred in reliance on the contract (e.g., $5,000 upfront fee; medical restoration costs).
+ ├── EXAM TRAP: Pre-contractual expenses incurred before the agreement was entered into cannot be recovered as reliance damages (*Chicago Coliseum v. Dempsey*).
+ ├── Can reliance damages be calculated?
+ │    ├─ YES ──► AWARD RELIANCE DAMAGES ("You can only pick one" rule: cannot stack expectation and reliance).
+ │    └─ NO  ──► Check Nominal Damages ($300 statutory nominal award in *Ericson*) or drop down to Level 3.
+       │
+       ▼
+[LEVEL 3: SPECIFIC PERFORMANCE (Equitable Court Order)]
+ Criteria: Awarded ONLY when monetary relief is inadequate AND subject matter is UNIQUE.
+ ├── Is the subject matter unique/one-of-a-kind (e.g., specific parcel of real estate, rare antique, unique prototype car)?
+ │    ├── YES ──► Does it involve PERSONAL SERVICES (labor, employment, artist, influencer)?
+ │    │            ├─ YES ──► STRICTLY DENIED under common law (Courts refuse to compel personal labor).
+ │    │            └─ NO  ──► GRANT SPECIFIC PERFORMANCE (Decree compelling conveyance).
+ │    └─ NO  ──► DENIED (Subject matter fungible; monetary damages suffice).
+```
+
+---
+
+### **3. Agency Authority & Principal/Agent Liability Decision Matrix**
+
+```text
+[START: Agent (A) signs contract or acts with Third Party (T) purporting to represent Principal (P)]
+       │
+       ▼
+[GATEWAY 1: ACTUAL AUTHORITY (Communication: Principal ──► Agent)]
+ ├── Express Actual Authority:
+ │    └── Did P communicate explicit words (written/oral) authorizing this exact action?
+ │         ├─ YES ──► [P IS BOUND].
+ │         └─ NO  ──► Check Implied Actual.
+ ├── Implied Actual Authority (*Miller v. Wick Building Co.*):
+ │    ├── Question: Did P's words or conduct reasonably cause the AGENT to believe they had authority?
+ │    ├── Scope Standard: Limited to what is "usual and necessary in the ordinary course of the business ACTUALLY CONDUCTED by the corporation".
+ │    └── Extraordinary Transactions Trap: Being General Manager does NOT convey implied authority to sell 75%+ of company assets or real estate (*Miller*).
+ ├─ ACTUAL AUTHORITY FOUND ──► [PRINCIPAL BOUND TO THIRD PARTY; AGENT NOT PERSONALLY LIABLE]
+ └─ NO ACTUAL AUTHORITY    ──► Proceed to Gateway 2.
+       │
+       ▼
+[GATEWAY 2: APPARENT AUTHORITY (Communication: Principal ──► Third Party)]
+ ├── Question: Did P's words or conduct reasonably lead the THIRD PARTY to believe A was authorized?
+ ├── TEST 2A: The Putative Agent Rule (ABSOLUTE TRAP)
+ │    └── A's self-declaration to T ("I am P's authorized agent!") NEVER creates apparent authority. It MUST originate from P.
+ ├── TEST 2B: Position & Secret Limitations
+ │    └── If P places A in a recognized role (e.g., General Manager) and gives A secret internal restrictions unknown to T, T may rely on customary role authority (*Miller*).
+ ├─ APPARENT AUTHORITY FOUND ──► [PRINCIPAL BOUND TO THIRD PARTY]
+ │                                └── BUT: P can sue A for indemnity / breach of fiduciary duty for exceeding actual authority!
+ └─ NO APPARENT AUTHORITY    ──► Proceed to Gateway 3.
+       │
+       ▼
+[GATEWAY 3: RATIFICATION (Post-Hoc Adoption)]
+ ├── Did P voluntarily affirm/adopt the unauthorized act with full knowledge of all material facts?
+ ├─ YES ──► [PRINCIPAL IS BOUND RETROACTIVELY]
+ └─ NO  ──► [PRINCIPAL IS NOT BOUND TO THIRD PARTY]
+             └── LIABILITY OUTCOME: Agent (A) is personally liable to Third Party (T) for breach of implied warranty of authority / contract damages.
+```
+
+---
+
+### **4. Agent Fiduciary Duties & White-Collar Crime Decision Tree**
+
+```text
+[START: Agent interacts with business opportunity, property, or confidential information]
+       │
+       ▼
+[BRANCH 1: FIDUCIARY DUTY OF CARE]
+ ├── Did the agent perform competently ("do a really good job")?
+ ├── Did the agent maintain adequate, usable business records for the principal?
+ └── Did the agent preserve strict confidentiality regarding principal's activities and communications?
+      ├─ FAILED ──► Breach of Fiduciary Duty of Care ──► Agent liable for resulting damages.
+      └─ PASSED ──► Duty of Care satisfied.
+       │
+       ▼
+[BRANCH 2: FIDUCIARY DUTY OF LOYALTY & CONFLICT PROTOCOL]
+ ├── Does the transaction involve self-dealing, competition with P, secret profits, or bribes?
+ │    ├─ YES ──► APPLY THE MANDATORY 3-STEP PROTOCOL:
+ │    │          ├── Step 1: DON'T ACT (Halt the transaction immediately).
+ │    │          ├── Step 2: DISCLOSE (Make full, unreserved disclosure of conflict/payment to P).
+ │    │          └── Step 3: GET INSTRUCTIONS (Wait for and follow P's express orders).
+ │    │          │
+ │    │          ├─ FAILED PROTOCOL ──► BREACH OF FIDUCIARY DUTY OF LOYALTY
+ │    │          │                      ├── Disgorgement: All secret profits/bribes surrendered to P.
+ │    │          │                      ├── Rescission of transaction + tort damages.
+ │    │          │                      └── Immediate termination of agency.
+ │    │          └─ COMPLIED FULLY  ──► Principal consents; transaction is valid.
+ │    └─ NO  ──► Proceed to Criminal & Securities Thresholds.
+       │
+       ▼
+[BRANCH 3: HONEST SERVICES FRAUD (§1346)]
+ ├── Did conduct involve Bribery or Kickbacks? (*Skilling v. United States*).
+ │    ├── (Note: Undisclosed self-dealing alone does NOT violate §1346 after *Skilling*).
+ ├── Is defendant a Private Citizen outside public employment? (*Percoco v. United States*).
+ │    ├── "Dominated and controlled" / "Special relationship" jury test is UNCONSTITUTIONALLY VAGUE.
+ │    └── Rule: A private citizen can only owe a duty of honest services to the public if they entered an ACTUAL AGENCY AGREEMENT delegating governmental authority.
+       │
+       ▼
+[BRANCH 4: SECURITIES INSIDER TRADING (Rule 10b-5 / 14e-3)]
+ ├── CLASSICAL THEORY (*Chiarella v. United States*):
+ │    └── Insider trades on material non-public info; requires fiduciary relationship between insider and company shareholders.
+ ├── TIPPER/TIPPEE LIABILITY (*Dirks*):
+ │    └── Insider tipper must breach duty for PERSONAL GAIN; tippee inherits duty only if they knew/should have known of the breach.
+ ├── MISAPPROPRIATION THEORY (*United States v. O'Hagan*):
+ │    └── Outsider (e.g., attorney, printer, journalist) deceives and breaches fiduciary duty owed to the SOURCE of the information.
+ └── TENDER OFFER TRAP:
+      └── Rule 14e-3: Does NOT require proof of a fiduciary duty breach once substantial steps toward a tender offer are taken!
+```
+
+---
+
+### **5. Property: Possession, Custom, and IP Infringement Trees**
+
+#### **Part A: Tangible Property & Possession Disputes**
+```text
+[START: Competing claims over unowned, wild, or abandoned resource]
+       │
+       ▼
+[TEST 1: INDUSTRY TRADE USAGE (*Swift v. Gifford*)]
+ ├── Does an established, reasonable, trade-wide custom exist (e.g., "the iron holds the whale")?
+ ├── Was pursuit continuous, and was claim made before conversion/cutting in?
+ ├─ YES ──► [TRADE USAGE OVERRIDES GENERAL COMMON LAW OF CAPTURE]
+ └─ NO  ──► Apply General Possession Rules (Test 2).
+       │
+       ▼
+[TEST 2: COMPLETE LEGAL POSSESSION (Gray's Rule)]
+ ├── 1. Intent to possess and exclude others?
+ ├── 2. Physical control: Complete control after all momentum of item and claimant ceases?
+ ├── Did incidental contact dislodge item before momentum stopped? (If yes, no possession).
+ ├─ FULL POSSESSION ACHIEVED ──► [SOLE TITLE & OWNERSHIP VESTED]
+ └─ INCOMPLETE POSSESSION    ──► Proceed to Test 3.
+       │
+       ▼
+[TEST 3: PRE-POSSESSORY INTEREST & CONVERSION (*Popov v. Hayashi*)]
+ ├── 1. Did actor take significant but incomplete steps toward possession of abandoned personal property?
+ ├── 2. Was the effort interrupted by the UNLAWFUL ACTS of others (e.g., mob violence)?
+ ├─ YES ──► ACTOR HAS A "PRE-POSSESSORY INTEREST" (Qualified legal right supporting Conversion).
+ │           │
+ │           ▼
+ │   Check Innocent Subsequent Acquirer (Hayashi):
+ │    ├── Did defendant commit wrongful/unlawful acts? (Hayashi was innocent).
+ │    ├── Did defendant achieve complete physical control? (Yes, pocketed loose ball).
+ │    └── Result: Ball entered defendant's hands with a "cloud on its title".
+ │         └── REMEDY: EQUITABLE DIVISION (*Arnold* prunes; *Keron* boys with money sock) 
+ │             ──► Sell property, divide proceeds 50/50.
+ └─ NO  ──► No cognizable interest. Finder who reduces item to complete control takes title.
+```
+
+#### **Part B: Intellectual Property & Commercial Identity**
+```text
+[START: Intangible Asset or Commercial Identity Dispute]
+       │
+       ├── 1. PATENTS (35 U.S.C. §101 / *Alice Corp. v. CLS Bank*):
+       │    ├── Step 1: Is claim directed to a patent-ineligible concept (law of nature, natural phenomena, abstract idea)?
+       │    │    └── (Intermediated settlement / risk hedging = abstract economic concept).
+       │    └── Step 2: Does claim add an "inventive concept" / transformative ordered combination beyond generic computer implementation?
+       │         ├─ NO  ──► PATENT INELIGIBLE.
+       │         └─ YES ──► Valid Patentable Subject Matter.
+       │
+       ├── 2. TRADE SECRETS (*DuPont v. Christopher* vs. *Dow Chemical*):
+       │    ├── Definition: Secret commercial information + reasonable precautions to maintain secrecy.
+       │    ├── Appropriated by "Improper Means"?
+       │    │    ├── Aerial photography of unfinished plant = IMPROPER MEANS even if flight in public airspace violated no aviation law (*DuPont*).
+       │    │    └── DISTINGUISH EPA/GOVERNMENT SEARCH (*Dow Chemical*): Conventional aerial photography of open outdoor industrial curtilage by regulatory agency ≠ unconstitutional search.
+       │    └─ Improper Means Found ──► Trade Secret Misappropriation.
+       │
+       └── 3. RIGHT OF PUBLICITY & TRADEMARKS (*White v. Samsung Electronics*):
+            ├── Statutory Publicity (Cal. Civ. Code §3344):
+            │    └── Requires literal use of "name, voice, signature, photograph, or likeness" (Mechanical robot in wig/gown ≠ literal "likeness").
+            ├── Common Law Right of Publicity:
+            │    └── Broader than §3344; protects unauthorized appropriation of CELEBRITY IDENTITY through any recognizable combination of cues (*Motschenbacher* race car, *Carson* "Here's Johnny", *White* Wheel of Fortune robot).
+            └── Lanham Act §43(a) Endorsement Confusion:
+                 └── *Sleekcraft* 8-Factor Test: Evaluates consumer likelihood of confusion over whether celebrity ENDORSED the product, even in a spoof/parody ad.
+```
+
+---
+
+### **6. Business Entity Selection & Governance Decision Tree**
+
+```text
+[START: Business Founders Form Enterprise]
+       │
+       ▼
+[CRITERIA 1: PERSONAL LIABILITY PROTECTION NEEDED?]
+ ├─ NO  ──► How many owners?
+ │           ├── Single Owner ──► SOLE PROPRIETORSHIP (Unlimited personal liability; full personal tax)
+ │           └── 2+ Owners    ──► GENERAL PARTNERSHIP (Mutual agency: every partner is an agent; joint & several personal liability)
+ │
+ └─ YES ──► Choose between Corporate or LLC Shield:
+             │
+             ▼
+[CRITERIA 2: OPERATIONAL FORMALITY & FINANCING GOALS]
+ ├── High internal flexibility, informal governance, operating agreement, pass-through taxation:
+ │    └── LIMITED LIABILITY COMPANY (LLC)
+ │
+ └── Need institutional capital, stock option pools, venture financing, separate entity personhood:
+      └── CORPORATION (Centralized Board/Officers governance; limited liability for shareholders)
+           │
+           ├── S-CORPORATION:
+           │    ├── Strict eligibility: 100 or fewer shareholders, only US citizens/residents, single class of stock.
+           │    └── Tax: Pass-through taxation (no corporate-level tax).
+           │
+           └── C-CORPORATION:
+                ├── Unrestricted ownership: Multiple classes of stock, institutional/foreign investors.
+                └── Tax: DOUBLE TAXATION (Corporate profits taxed at entity level + dividends taxed at shareholder level).
+```
+
+---
+
+Which specific branch or case crossover (e.g., how *Steinberg* interacts with *Dempsey*, or how *Miller* interacts with *Percoco*) would you like to drill next? 🎯
