@@ -1,0 +1,173 @@
+Here is the complete compilation of **every fact pattern, slide question, and lecture hypothetical** from your course materials outside of the Practice Exam (Examination One), along with their official/inferred answers, calculations, and analytical notes.
+
+---
+
+### **MODULE 1: SLIDE DECK & HANDOUT QUESTIONS (Class 010 & Class 012)**
+
+#### **1. Yadid & Fatima — Building Expansion (Class 012 Slide & IMG_1018)**
+* **The Fact Pattern:**  
+  Yadid operates a wealth management firm in a small building and wants to expand to rent out space. Fatima owns a construction firm. Fatima says: *"If and only if you promise to give me US\$900,000 I promise that I will expand your building according to the blueprints you provided."* Yadid says: *"Awesome! The sooner the better. I have renters waiting..."*  
+  Before Yadid can say anything else, Fatima says: *"Well then, if and only if you promise to give me US\$1,000,000 I promise I will expand your building according to the blueprints... and get it done in six months."*  
+  Yadid says: *"Still awesome, everyone else I talked to asked for US\$1,500,000. I accept."*  
+  Yadid gives Fatima US\$1,000,000. Six months later, Fatima has not started. Yadid loses US\$300,000 in rental profit. How much does Fatima owe Yadid in contract damages?
+* **Official Answer:** **Choice D: US\$1,800,000**.
+* **The Math Breakdown:**
+  * **Refund of advance payment:** US\$1,000,000 (restitution/expectation baseline).
+  * **Cost of completion/cover differential:** \\(\$1,500,000 \text{ (market rate)} - \$1,000,000 \text{ (contract price)} = \mathbf{\$500,000}\\).
+  * **Consequential lost rental profits (*Hadley v. Baxendale*):** US\$300,000 (fully communicated and foreseeable at contracting).
+  * **Total Damages:** \\(\$1,000,000 + \$500,000 + \$300,000 = \mathbf{\$1,800,000}\\).
+
+---
+
+#### **2. Toph & Momo — Acetone Brokerage Deal (Class 012 Slide)**
+* **The Fact Pattern:**  
+  Toph (salesperson for a commodities brokerage) says to Momo (buyer for a pharma company): *"If my boss signs off on this, we can sell you sixteen metric tons of acetone for US\$1,300 per ton."* Momo replies: *"Awesome. We will do that deal."*
+* **Official Answer:** **Choices B and E are correct**:
+  * **B. Momo has made an offer**.
+  * **E. Salespeople are sometimes agents**.
+* **The Legal Reason:** Toph’s statement was conditioned on his boss signing off; he did not manifest a present willingness to be bound. Therefore, Toph made an **invitation to make an offer**, and Momo’s statement was the actual **offer**.
+
+---
+
+#### **3. Tamara & Beto — Spreadsheet Software & BetTam!! (Class 012 Slide)**
+* **The Fact Pattern:**  
+  Tamara works as a financial analyst for six years and develops a program streamlining spreadsheet operations. She forms a partnership with Beto to sell the program to financial institutions. Tamara files for a patent, and they draft marketing literature. They call their partnership "BetTam!!", signified by a drawing of a red poker chip with a green "BT!" in the middle. Has Tamara perfected any intellectual property interests? Will she?
+* **Analytical Notes & Answer:**
+  * **Patents:** **No perfected interest yet**. Filing an application is merely a request; patent rights are perfected **only when granted and issued by the USPTO**. Under ***Alice Corp.***, spreadsheet software streamlining generic business operations faces a severe §101 abstract-idea hurdle unless it contains an inventive concept that improves the functioning of the computer itself.
+  * **Copyright:** **Yes, already perfected** in the original program code, marketing literature, and poker chip logo drawing upon **fixation in a tangible medium** (registration is not required to create the interest). Note: copyright protects only expression, not the underlying spreadsheet functionality.
+  * **Trademarks:** **Not yet fully perfected**. A trademark requires actual use in commerce to distinguish goods. Drafting internal marketing literature and adopting a logo is pre-commercial preparation.
+  * **Trade Secrets:** Potential interest in source code and algorithms if kept secret via reasonable precautions before filing public patent disclosures.
+
+---
+
+#### **4. Bobby & Jeevus — Cannabis Ice Cream Truck (Class 012 Slide)**
+* **The Fact Pattern:**  
+  Marijuana is legal in Delaware, but not in Pennsylvania. Bobby (Penn freshman) and roommate Jeevus want to sell marijuana out of converted ice cream trucks. They want to bounce the idea around and seek seed funding. What business form should they take, and why?
+* **Answer & Notes:**  
+  * **Entity:** **Limited Liability Company (LLC)**.
+  * **Why:** If they operate informally, they default to a **General Partnership**, where each is jointly and severally liable for all debts, traffic accidents, and legal penalties. Operating commercial vehicles and crossing state lines with cannabis creates immense tort, collision, and regulatory liability. An LLC creates a **corporate liability shield** protecting their personal assets while offering flexible governance and pass-through taxation.
+
+---
+
+#### **5. Judge Hayashi Whale Ruling — Jurisprudence (Class 012 Slide)**
+* **The Fact Pattern:**  
+  Judge Hayashi writes: *"Whales are elegant creatures that may be more intelligent than humans... Nature rules! I am happy to say that in this country, the law clearly states 'No person may perfect a property interest in whales or in any animal on the endangered species list.' Therefore, there cannot be a property interest in this whale."* Which theory is reflected, and why?
+* **Answer & Notes:**  
+  * **Theory:** **Legal Positivism**.
+  * **Why:** Despite the sentimental rhetoric (*"Nature rules!"*), Judge Hayashi does **not** base his legal holding on moral axioms or higher universal reason. He grounds the decision strictly in the **enacted sovereign command**: *"the law clearly states 'No person may perfect a property interest...'"*. He strictly separates personal sentiment from the statute as written.
+
+---
+
+#### **6. Bob, Svetlana, Juanita & Cargill — Pea Plant Venture (Class 010.pdf & IMG_1019/1020)**
+* **The Fact Pattern:**  
+  Bob invents a way to harvest hormones from gene-altered pea plants. Svetlana organizes timelines, meetings, and business planning. They graduate and bring in a biologist and ag specialist. European investor Juanita offers **€5 million** for a 15% stake until exit, demanding **20% of hormones be sold at cost to underresourced healthcare clinics**. They acquire 100+ hectares of land, building sterile labs and facilities. The venture is ultimately sold to privately held agribusiness giant Cargill.
+* **Entity & Governance Analysis:**
+  * **The Partnership Trap:** When Svetlana joined to organize meetings and share profits/load, they drifted into an informal **General Partnership** with joint and several personal liability.
+  * **S-Corp Disqualification:** Juanita is an investor with euros from Europe; S-Corporations **strictly prohibit non-resident alien shareholders**.
+  * **The Public Mission Shield:** In a standard corporation, selling 20% of inventory at cost violates the fiduciary duty to maximize shareholder profit. They require a **Benefit Corporation (B-Corp)** charter to legally empower management to prioritize social medicine over pure profit.
+  * **Exit:** Chartered under a corporate umbrella, enabling clean acquisition shares for Cargill.
+
+---
+
+### **MODULE 2: CONTRACT REMEDY FACT PATTERNS (IMG_1017, 1018, 1021)**
+
+#### **7. Sam & Juanita — Fact Pattern A (Advance Paid) (IMG_1017)**
+* **Facts:** Contract price = \$300; Sam pays \$300 on Tuesday; Juanita breaches Wednesday; replacement painter costs \$400; house value increases by \$1,000.
+* **Calculation:** \\(\$300 \text{ (refund of advance paid)} + \$100 \text{ (extra cover cost)} = \mathbf{\$400}\\).
+* **Damages:** **US\$400 in Expectation Damages**.
+
+#### **8. Sam & Juanita — Fact Pattern B (No Advance Paid) (IMG_1017)**
+* **Facts:** Contract price = \$300 (promised, not paid); Juanita breaches; replacement painter costs \$400; house value increases by \$1,000.
+* **Calculation:** \\(\$400 \text{ (market replacement cost)} - \$300 \text{ (unpaid contract price saved)} = \mathbf{\$100}\\).
+* **Damages:** **US\$100 in Expectation Damages**.
+
+#### **9. Sam & Juanita — Fact Pattern C (Unilateral Offer Trap) (IMG_1017)**
+* **Facts:** Sam offers: *"If and only if you paint my house on Wednesday I promise I will give you US\$500."* Juanita says: *"Great! I promise I will paint your house,"* but does not paint.
+* **Damages:** **US\$0 in Contract Damages**.
+* **Reasoning:** Sam made a unilateral offer inviting acceptance solely through performance (painting). Juanita's return promise did not accept the offer; no contract was ever formed.
+
+#### **10. Ajax & Rhea — The Car Problem (IMG_1021)**
+* **Facts:** On Monday, Rhea offers to buy Ajax's car for \$30,000, explaining she has a client wanting to rent it Thursday for \$5,000. Ajax responds: *"Rhea, if and only if you promise to give me US\$30,000, I promise I will transfer to you complete ownership... on Wednesday. Please communicate your promise to me in a signed writing by tomorrow (Tuesday)."* Rhea delivers a signed note Tuesday and wires \$30,000 Wednesday. Ajax refuses to deliver. Similar cars cost \$35,000 and cannot arrive until Friday.
+* **Questions & Answers:**
+  * **a) As of Friday, whose property is The Car?**  
+    **Ajax’s property**. A contract to transfer property does not pass title until actual delivery/conveyance occurs.
+  * **b) Does Ajax owe contract damages, and what are they?**  
+    **US\$40,000 gross recovery (or US\$10,000 net damages above refund)**.
+    * Refund of purchase price: **\$30,000**.
+    * Cover price differential: \\(\$35,000 - \$30,000 = \mathbf{\$5,000}\\).
+    * Consequential damages: **\$5,000** in lost client rental profit (expressly communicated on Monday, making it foreseeable at contracting under *Hadley v. Baxendale*).
+
+#### **11. Ingrid, Svetlana & T-Corporation (IMG_1018, Fact Pattern D)**
+* **Facts:** Ingrid promises 40% of closely held T-Corporation in exchange for Svetlana transferring her public X and Y shares. T-Corp shares have no trading record and unknown value (something with blockchain). Svetlana transfers her shares; Ingrid sells them and gives all T-Corp shares to Eldon, a recluse in Belarus.
+* **Remedy & Calculation:**  
+  Expectation damages based on T-Corp's future value are speculative and unmeasurable. The court awards **Reliance Damages**, putting Svetlana back in her pre-contract position by awarding the **market value of her transferred X and Y shares**.
+
+#### **12. Peter & Dr. Kris — The Broken Toe (IMG_1018, Fact Pattern E / Hawkins Model)**
+* **Facts:** Peter has an agonizing broken toe. Dr. Kris emphatically promises she can alleviate the pain using a new surgery if he pays \$10,000, warning it is painful and requires 10 days in the hospital. Peter promises and pays. The surgery worsens the pain and keeps Peter hospitalized for 20 days.
+* **Damages Calculation:**  
+  Expectation damages for a "pain-free toe" cannot be calculated. Peter recovers **Reliance Damages**: refund of the \$10,000 fee, costs of restorative medical care, plus hospital costs for the **10 extra days**. He recovers **\$0 for the initial 10 days and initial surgical pain** because he consented to that detriment as part of the bargain.
+
+---
+
+### **MODULE 3: VIDEO LECTURE HYPOTHETICALS**
+
+#### **Property Scenarios (Class 3 Lecture)**
+* **The Clouds & The Son:** Can you perfect property in clouds or a child? **No.** Natural resources in the commons and human beings cannot be reduced to personal property (*res*).
+* **The Isle Royale Water Bags:**
+  * *Gift:* Buying bags and giving them to his kids extinguishes his property interest and creates theirs.
+  * *Abandonment:* Leaving hiking gear behind intentionally relinquishes control and intent to own, extinguishing title.
+  * *Consumption:* The son drinking water extinguishes the property interest by consuming it into his body.
+  * *Dissipation / Destruction:* Water evaporating in 100°F heat dissipates the *res*.
+  * *Bailment:* Handing water bags or car keys to each other creates a non-possessory bailment (holder must exclude others and use only for authorized purpose).
+  * *Eminent Domain / Seizure:* Firefighters commandeering gear during a wildfire extinguishes title by operation of law.
+  * *Criminal Forfeiture:* State seizing a water bag used to commit an assault extinguishes rights by law.
+* **The Neighbor’s Lawn Easement:** Walking across a neighbor's yard to reach the bus stop is a non-possessory **easement**.
+* **The AC Repairman Lien:** Repairing an expensive air conditioner without being paid creates an encumbrance/lien by operation of law, allowing the repairman to force the sale of the house through court and sheriff.
+* **The Grandparent Life Estate & Library:** 
+  * Granting a house to a grandparent for life leaves the grantor with a **reversion** (which can be sold immediately).
+  * Granting a house to Philadelphia *"so long as it is used as a library"* gives the city a **contingent interest** and the grantor a reversion.
+* **Oil Pipeline Confusion:** Intermingling crude oil in a pipeline creates equal undivided joint ownership in the mixture.
+
+#### **Contract Formation Scenarios (Class 6 Lecture)**
+* **The Bilateral vs. Unilateral Microwave Tower:**
+  * *Unilateral:* *"If and only if you build the tower, I promise \$1,000,000"* \\(\rightarrow\\) Accepted only by completing performance.
+  * *Bilateral:* *"If and only if you promise to build the tower, I promise \$1,000,000"* \\(\rightarrow\\) Secretly building the tower without communicating the promise forms **no contract**.
+* **The Casual Locust Walk Promise:** *"Let's get together"* / *"Yeah, we will"* is an unenforceable social promise lacking bargained-for consideration.
+* **The 500-Promise Negotiation:** Agreeing to 250 of 500 terms in a proposal operates as a **counteroffer**, not an acceptance.
+* **500 Acres & The Sinkhole:** Offering land that collapses into a sinkhole before acceptance terminates the power of acceptance due to facts inconsistent with the offer.
+* **Job Offer Acceptance:** Accepting a job offer and going home forms a contract; you cannot "unaccept" the next day because you received three better offers.
+
+#### **Contract Remedy Scenarios (Class 7 Lecture)**
+* **The \$20 Lawn Mowing:** Homeowner pays \$20 in advance; unmowed lawn is worth \$50, mowed lawn worth \$60 (+\$10 increment); replacement mower charges \$30. Court awards **US\$30** (cost of performance/cover), not the \$10 value increase.
+* **The Moon Rock & Sotheby's:** Buyer pays \$2 million for a moon rock appraised by Sotheby's at \$2 million; seller breaches because federal law bars private possession. Court awards **US\$2 million in difference-in-value damages** because open-market replacement is impossible.
+* **The Super-Mutant Surgery:** Surgeon charges \$10,000 promising to make patient a "super-mutant." Surgery harms patient (body value drops from \$100k to \$80k); restorative surgery costs \$500k. Expectation is unmeasurable; court awards **reliance damages of US\$500,000** (restoration cost).
+* **The One-of-a-Kind Car (\$200,000):** Buyer pays \$200,000 upfront for a totally unique car; seller breaches. Court orders **specific performance** because money damages are inadequate for a unique good.
+* **The Overgrown Lawn Dinner Party:** Lawn service breaches; ruined outdoor dinner party constitutes **consequential damages**, recoverable only if foreseeable at contracting.
+
+#### **Agency & Authority Scenarios (Class 10 Lecture)**
+* **Child at the Store:** Child purchasing groceries on a parent’s store account acts as an agent; the parent is the principal bound to pay.
+* **Office Hours & Winter Break:**
+  * *Actual Authority:* Principal tells friend: *"Sign me up for this activity while I go to office hours"* (Communication: Principal \\(\rightarrow\\) Agent).
+  * *Apparent Authority:* Principal tells group of friends: *"Leslie will arrange how we get home over winter break"* (Communication: Principal \\(\rightarrow\\) Third Parties).
+* **The Putative Agent:** Stranger approaches saying: *"I am the agent for P."* A putative agent's self-declaration creates **zero authority**; third parties must verify manifestations from the principal.
+* **The Bolts & Nails Salesperson:** Agent authorized to sell bolts enters a contract to supply bolts *and* nails. The principal is not bound to the nails; the unauthorized agent is **personally liable** for resulting delay damages to the contractor.
+* **Corporate Cash Shortfall Confidentiality:** An agent cannot disclose that their company is experiencing a cash shortage, even if the principal never explicitly labeled the information confidential (duty of care and confidentiality).
+
+#### **Fourth Amendment & Privacy Scenarios (Class 15 Lecture)**
+* **Open Notebook on Sidewalk:** Government reading an open notebook lying on the ground is plain observation, not a search.
+* **Katz Telephone Booth:** Attaching an electronic listening device to the outside of a public phone booth violates reasonable expectations of privacy.
+* **Street Shouter with Privacy Sign:** A person shouting crimes while holding an "I expect privacy" sign exhibits subjective privacy (Prong 1), but fails societal reasonableness (Prong 2 of Katz).
+* **Enclosed Restroom:** Closing the door in a public restroom passes both prongs of Katz.
+
+#### **Criminal Law Scenarios (Class 17 Lecture)**
+* **Bob Wants to Kill Chivas (Concurrence):** Bob announces he wants to kill Chivas, but later accidentally runs him over with a car. Not intentional murder because the *mens rea* (guilty mind) did not concur simultaneously with the *actus reus* (the act).
+* **Proportional Self-Defense:** Bob tries to hit Chivas with his hand. Chivas can grab Bob's arm or push him, but cannot kill Bob (force limited to minimum necessary).
+* **Deadly Force & Property:** Common law strictly prohibits using deadly force solely to protect property.
+* **Duress Scenarios:**
+  * Gun to head: *"Rob this bank or I kill you."* \\(\rightarrow\\) Bank robbery is excused by duress.
+  * Gun to head: *"Kill Ichabod or I kill you."* \\(\rightarrow\\) Killing Ichabod is **not excused**; duress never excuses the taking of human life.
+* **Mother-in-Law’s Green Subaru (Mistake of Fact):** Driver accidentally drives off in an identical green Subaru because the electronic key worked; realizes error when the radio station is wrong and returns it. An honest mistake of fact negates the *mens rea* for theft (excused), whereas a mistake of law ("I didn't know theft was illegal") is never excused.
+
+---
+
+Would you like to run through the specific calculations for **Ajax & Rhea** or **Yadid & Fatima** one more time to ensure your numbers match up before your exam? 🎯

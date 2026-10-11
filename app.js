@@ -1,11 +1,18 @@
 (() => {
   const D=window.LAW_DATA, $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const modes=['Exams','Videos','Readings','Midterm'];let mode=location.hash==='#midterm'?'Midterm':'Exams',set=D.sets[0],filter='all',index=0;
+  const modes=['Exams','Videos','Readings','Midterm','Fact Patterns'];let mode=location.hash==='#midterm'?'Midterm':location.hash==='#fact-patterns'?'Fact Patterns':'Exams',set=D.sets[0],filter='all',index=0,factModule='all';
+  const referenceMode=()=>mode==='Midterm'||mode==='Fact Patterns';
   const responses={},positions={};
   function filtered(){return set.questions.filter(q=>filter==='all'||filter==='mc'&&q.type==='multi'||filter==='fr'&&q.type==='fr'||filter==='numeric'&&q.type==='numeric'||filter==='outside'&&q.offScope||filter==='background'&&!q.offScope)}
   const posKey=()=>set.id+':'+filter;
   function nav(){
     $('modes').innerHTML=modes.map(m=>`<button data-mode="${m}" class="${mode===m?'active':''}" aria-pressed="${mode===m}">${m}</button>`).join('');
+    if(mode==='Fact Patterns'){
+      $('sets').innerHTML='';
+      $('setintro').innerHTML='<h2>Fact Patterns &amp; Lecture Hypotheticals</h2><p>Your supplied facts, answers, calculations, and analytical notes. Answers and “official” labels are reproduced from your compilation.</p><p class="document-links"><a href="sources/fact-patterns.txt" target="_blank" rel="noopener">Open original text ↗</a> · <a href="sources/fact-patterns.txt" download="LGST Fact Patterns.txt">Download compilation</a></p>';
+      const tabs=[['all','All modules'],['slides','Slides & handouts'],['remedies','Contract remedies'],['lectures','Lecture hypotheticals']];
+      $('filters').innerHTML=tabs.map(([id,title])=>`<button data-fact-module="${id}" class="${factModule===id?'active':''}" aria-pressed="${factModule===id}">${title}</button>`).join('');return;
+    }
     if(mode==='Midterm'){
       $('sets').innerHTML='';
       $('setintro').innerHTML='<h2>Midterm</h2><p>Your uploaded notes, including all six pages and diagrams. Select a page to enlarge it.</p><p class="document-links"><a href="sources/midterm.pdf" target="_blank" rel="noopener">Open full-size PDF ↗</a> · <a href="sources/midterm.pdf" download="Midterm.pdf">Download PDF</a></p>';
@@ -21,7 +28,12 @@
   }
   function render(){
     nav();$('quiz').classList.toggle('document-host',mode==='Midterm');
-    document.querySelector('.scope').hidden=mode==='Midterm';
+    $('quiz').classList.toggle('compilation-host',mode==='Fact Patterns');
+    document.querySelector('.scope').hidden=referenceMode();
+    if(mode==='Fact Patterns'){
+      const compilation=window.LAW_FACT_PATTERNS;
+      $('quiz').innerHTML=`<div class="compilation">${factModule==='all'?`<div class="compilation-intro">${compilation.introHtml}</div>`:''}${compilation.modules.filter(m=>factModule==='all'||factModule===m.id).map(m=>`<section class="compilation-module"><h3>${esc(m.title)}</h3>${m.entries.map(e=>`<article class="fact-pattern">${e.html}</article>`).join('')}</section>`).join('')}${factModule==='all'?`<div class="compilation-outro">${compilation.outroHtml}</div>`:''}</div>`;return;
+    }
     if(mode==='Midterm'){
       const labels=['Jurisprudence and property','Contracts and remedies','Agency, terminology, and cases','Business forms and examples','Law and intellectual property diagrams','Business forms, contracts, and agency diagrams'];
       $('quiz').innerHTML=`<div class="midterm-pages">${labels.map((label,i)=>`<figure><figcaption>Page ${i+1} of 6 · ${esc(label)}</figcaption><a href="sources/midterm-pages/page-${i+1}.png" target="_blank" rel="noopener" aria-label="Enlarge page ${i+1}: ${esc(label)}"><img src="sources/midterm-pages/page-${i+1}.png" alt="Midterm notes, page ${i+1}: ${esc(label)}" width="1855" height="2400" loading="${i===0?'eager':'lazy'}"></a></figure>`).join('')}</div>`;return;
@@ -52,7 +64,8 @@
     $('backReview').onclick=()=>{index=0;render()};if($('nextExam'))$('nextExam').onclick=()=>{const exams=D.sets.filter(s=>s.mode==='Exams');set=exams[exams.indexOf(set)+1];filter='all';index=0;render()};
   }
   document.addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;
-    if(b.dataset.mode){mode=b.dataset.mode;history.replaceState(null,'',mode==='Midterm'?'#midterm':location.pathname+location.search);if(mode!=='Midterm')set=D.sets.find(s=>s.mode===mode);filter='all';index=mode==='Midterm'?0:positions[posKey()]||0;render()}
+    if(b.dataset.mode){mode=b.dataset.mode;history.replaceState(null,'',mode==='Midterm'?'#midterm':mode==='Fact Patterns'?'#fact-patterns':location.pathname+location.search);if(!referenceMode())set=D.sets.find(s=>s.mode===mode);filter='all';index=referenceMode()?0:positions[posKey()]||0;render()}
+    if(b.dataset.factModule){factModule=b.dataset.factModule;render();$('filters').scrollIntoView({behavior:'smooth',block:'start'})}
     if(b.dataset.set){set=D.sets.find(s=>s.id===b.dataset.set);filter='all';index=positions[posKey()]||0;render()}
     if(b.dataset.filter){filter=b.dataset.filter;index=positions[posKey()]||0;render()}
     if(b.dataset.index!==undefined){index=Number(b.dataset.index);render()}

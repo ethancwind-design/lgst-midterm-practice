@@ -1,6 +1,6 @@
 # LGST 1010 Midterm Practice
 
-Practice questions across ten exams, lecture banks, and readings, plus a Midterm tab containing the uploaded six-page PDF.
+Practice questions across ten exams, lecture banks, and readings, plus a Midterm tab containing the uploaded six-page PDF and a Fact Patterns tab containing the supplied slide, remedy, and lecture compilation.
 
 Open `index.html` in a browser, or serve this folder with any static web server. No build step or installation is required.
 
