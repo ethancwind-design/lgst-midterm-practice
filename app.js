@@ -1,15 +1,14 @@
 (() => {
   const D=window.LAW_DATA, $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const modes=['Exams','Videos','Readings','Studocu','Trees'];let mode=location.hash==='#trees'?'Trees':'Exams',set=D.sets[0],filter='all',index=0,treeTopic=5;
-  const treeTabs=[['Contract formation',0],['Breach & remedies',1],['Agency authority',2],['Fiduciary duties',3],['Property & IP',4],['Business entities · rebuilt',5]];
+  const modes=['Exams','Videos','Readings','Midterm'];let mode=location.hash==='#midterm'?'Midterm':'Exams',set=D.sets[0],filter='all',index=0;
   const responses={},positions={};
   function filtered(){return set.questions.filter(q=>filter==='all'||filter==='mc'&&q.type==='multi'||filter==='fr'&&q.type==='fr'||filter==='numeric'&&q.type==='numeric'||filter==='outside'&&q.offScope||filter==='background'&&!q.offScope)}
   const posKey=()=>set.id+':'+filter;
   function nav(){
     $('modes').innerHTML=modes.map(m=>`<button data-mode="${m}" class="${mode===m?'active':''}" aria-pressed="${mode===m}">${m}</button>`).join('');
-    if(mode==='Trees'){
-      $('sets').innerHTML=treeTabs.map(([title,n])=>`<button class="setbtn ${n===treeTopic?'active':''}" data-tree="${n}" aria-pressed="${n===treeTopic}">${title}<small>${n===5?'013 + verified extensions':'Imported study outline'}</small></button>`).join('');
-      $('setintro').innerHTML=`<h2>${treeTabs[treeTopic][0]}</h2><p>${treeTopic===5?'Entity form, federal tax treatment, then management and liability. All five core forms in uploaded 013, plus LLP as a modest extension. Source references open the reading or official guidance.':'The supplied decision-tree outline. Extra and unverified branches are flagged; they do not expand the main midterm question bank.'}</p><p class="tree-links"><a href="decision-trees.html?topic=${treeTopic}" target="_blank" rel="noopener">Open full-size trees</a> · <a href="sources/013-choose-business-structure.pdf" target="_blank" rel="noopener">Read uploaded 013</a></p>`;
+    if(mode==='Midterm'){
+      $('sets').innerHTML='';
+      $('setintro').innerHTML='<h2>Midterm</h2><p>Your uploaded notes, including all six pages and diagrams. Select a page to enlarge it.</p><p class="document-links"><a href="sources/midterm.pdf" target="_blank" rel="noopener">Open full-size PDF ↗</a> · <a href="sources/midterm.pdf" download="Midterm.pdf">Download PDF</a></p>';
       $('filters').innerHTML='';return;
     }
     $('sets').innerHTML=D.sets.filter(s=>s.mode===mode).map(s=>`<button class="setbtn ${set.id===s.id?'active':''}" data-set="${s.id}" aria-pressed="${set.id===s.id}">${esc(s.title)}<small>${s.questions.length} questions · ${s.id==='real'?'source paper':s.id.startsWith('exam')?'new scenarios':s.mode==='Readings'?'source + study prompts':'source bank'}</small></button>`).join('');
@@ -18,12 +17,15 @@
     if(set.questions.some(q=>q.type==='multi'))fs.push(['mc','Multiple choice']);
     if(set.questions.some(q=>q.type==='fr'))fs.push(['fr','Written responses']);
     if(set.questions.some(q=>q.type==='numeric'))fs.push(['numeric','Calculations']);
-    if(mode==='Studocu')fs.push(['background','Background questions'],['outside','Outside midterm scope']);
     $('filters').innerHTML=fs.map(([id,name])=>`<button data-filter="${id}" class="${filter===id?'active':''}" aria-pressed="${filter===id}">${name} <span>(${set.questions.filter(q=>id==='all'||id==='mc'&&q.type==='multi'||id==='fr'&&q.type==='fr'||id==='numeric'&&q.type==='numeric'||id==='outside'&&q.offScope||id==='background'&&!q.offScope).length})</span></button>`).join('');
   }
   function render(){
-    nav();$('quiz').classList.toggle('tree-host',mode==='Trees');
-    if(mode==='Trees'){$('quiz').innerHTML=`<iframe id="treeFrame" src="decision-trees.html?topic=${treeTopic}&embedded=1" title="${esc(treeTabs[treeTopic][0])} decision tree" style="width:100%;height:900px;border:0;display:block" loading="eager"></iframe>`;return}
+    nav();$('quiz').classList.toggle('document-host',mode==='Midterm');
+    document.querySelector('.scope').hidden=mode==='Midterm';
+    if(mode==='Midterm'){
+      const labels=['Jurisprudence and property','Contracts and remedies','Agency, terminology, and cases','Business forms and examples','Law and intellectual property diagrams','Business forms, contracts, and agency diagrams'];
+      $('quiz').innerHTML=`<div class="midterm-pages">${labels.map((label,i)=>`<figure><figcaption>Page ${i+1} of 6 · ${esc(label)}</figcaption><a href="sources/midterm-pages/page-${i+1}.png" target="_blank" rel="noopener" aria-label="Enlarge page ${i+1}: ${esc(label)}"><img src="sources/midterm-pages/page-${i+1}.png" alt="Midterm notes, page ${i+1}: ${esc(label)}" width="1855" height="2400" loading="${i===0?'eager':'lazy'}"></a></figure>`).join('')}</div>`;return;
+    }
     const qs=filtered();index=Math.min(index,Math.max(0,qs.length-1));positions[posKey()]=index;
     if(!qs.length){$('quiz').innerHTML='<p class="empty">No questions in this subtab.</p>';return}
     const q=qs[index],r=responses[q.id],answered=qs.filter(q=>responses[q.id]).length;
@@ -50,14 +52,12 @@
     $('backReview').onclick=()=>{index=0;render()};if($('nextExam'))$('nextExam').onclick=()=>{const exams=D.sets.filter(s=>s.mode==='Exams');set=exams[exams.indexOf(set)+1];filter='all';index=0;render()};
   }
   document.addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;
-    if(b.dataset.mode){mode=b.dataset.mode;if(mode!=='Trees')set=D.sets.find(s=>s.mode===mode);filter='all';index=mode==='Trees'?0:positions[posKey()]||0;render()}
-    if(b.dataset.tree!==undefined){treeTopic=Number(b.dataset.tree);render()}
+    if(b.dataset.mode){mode=b.dataset.mode;history.replaceState(null,'',mode==='Midterm'?'#midterm':location.pathname+location.search);if(mode!=='Midterm')set=D.sets.find(s=>s.mode===mode);filter='all';index=mode==='Midterm'?0:positions[posKey()]||0;render()}
     if(b.dataset.set){set=D.sets.find(s=>s.id===b.dataset.set);filter='all';index=positions[posKey()]||0;render()}
     if(b.dataset.filter){filter=b.dataset.filter;index=positions[posKey()]||0;render()}
     if(b.dataset.index!==undefined){index=Number(b.dataset.index);render()}
     if(b.id==='copyAI'){const q=filtered()[index],r=responses[q.id];const txt=`Grade my LGST 1010 practice response against the supplied course example, not a generic legal rule. Flag any ambiguity or unsupported assumption. Explain the first substantive mistake, then suggest a better response. The example key may be proposed rather than official.\n\nQuestion:\n${q.context||''}\n${q.prompt}\n\nMy response:\n${r.value}\n\nExample response:\n${q.answer}\n\nReasoning checklist:\n${q.rubric.join('\n')}\n\nSource: ${q.source}`;try{await navigator.clipboard.writeText(txt);$('copyStatus').textContent=' Copied. Paste into your AI tool.'}catch{$('copyStatus').textContent=' Clipboard unavailable. Select and copy the question, your response, and example above.'}}
   });
-  window.addEventListener('message',e=>{const frame=$('treeFrame');if(frame&&e.source===frame.contentWindow&&(e.origin===location.origin||location.protocol==='file:'&&e.origin==='null')&&e.data?.type==='law-tree-height'&&Number.isFinite(e.data.height)){frame.style.height=Math.max(500,Math.min(30000,e.data.height))+'px'}});
   $('sourceContent').innerHTML=`<p>${esc(D.coverage)}</p><p>${esc(D.sourceNotes)}</p><ul><li>8 real exam questions; 72 generated questions across nine additional exams.</li><li>43 lecture questions/examples across classes 3, 6, 7 and 10; eight original contract problems.</li><li>Readings practice: source main questions and additional explicitly generated study questions through 015.</li><li>All seven Studocu prompts, including the three essays; four are flagged outside scope.</li><li>Real exam choices can have multiple correct answers. Questions 1–4 use your supplied answer key for exact-set scoring. Question 3 retains “Roger” in the original choice C; the key is B and E.</li><li>The handwritten building answer is $1,800,000, subject to stated loss assumptions; its uncertain words are marked.</li><li>Margin fragment “Capture news?” has unclear wording and no supplied answer. “What’s the promise contract?” is shorthand for identifying the exact enforceable promise. These are not silently made into scored exam questions.</li><li>The photographed Bob–Svetlana venture scenario has no visible questions. Exam #10 includes a labeled generated question inspired by those facts.</li></ul><p><a href="sources/readings-001-015.pdf" target="_blank" rel="noopener">Open original packet pages 1–118 (in-scope readings) ↗</a></p><p><a href="sources/studocu.pdf" target="_blank" rel="noopener">Open the Studocu paper ↗</a></p><p><b>Answer confidence:</b> lecture examples have lecturer-stated answers; real-paper questions 1–4 use your supplied key and explanations; written-response examples are source-supported interpretations; handwritten answers retain ambiguity; generated answers are proposed applications; Studocu is a student resource. No answer in this site is represented as an official professor grading key.</p>`;
   $('about').onclick=()=>$('sourceDialog').showModal();$('closeDialog').onclick=()=>$('sourceDialog').close();$('sourceDialog').onclick=e=>{if(e.target===$('sourceDialog'))$('sourceDialog').close()};render();
 })();
