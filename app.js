@@ -9,7 +9,7 @@
     $('modes').innerHTML=modes.map(m=>`<button data-mode="${m}" class="${mode===m?'active':''}" aria-pressed="${mode===m}">${m}</button>`).join('');
     if(mode==='Fact Patterns'){
       $('sets').innerHTML='';
-      $('setintro').innerHTML='<h2>Fact Patterns &amp; Lecture Hypotheticals</h2><p>Your supplied facts, answers, calculations, and analytical notes. Answers and “official” labels are reproduced from your compilation.</p><p class="document-links"><a href="sources/fact-patterns.txt" target="_blank" rel="noopener">Open original text ↗</a> · <a href="sources/fact-patterns.txt" download="LGST Fact Patterns.txt">Download compilation</a></p>';
+      $('setintro').innerHTML='<h2>Fact Patterns &amp; Lecture Hypotheticals</h2><p>Full original wording. Select “Show answer” to reveal each answer, calculation, and analytical note.</p>';
       const tabs=[['all','All modules'],['slides','Slides & handouts'],['remedies','Contract remedies'],['lectures','Lecture hypotheticals']];
       $('filters').innerHTML=tabs.map(([id,title])=>`<button data-fact-module="${id}" class="${factModule===id?'active':''}" aria-pressed="${factModule===id}">${title}</button>`).join('');return;
     }
@@ -66,6 +66,7 @@
   document.addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;
     if(b.dataset.mode){mode=b.dataset.mode;history.replaceState(null,'',mode==='Midterm'?'#midterm':mode==='Fact Patterns'?'#fact-patterns':location.pathname+location.search);if(!referenceMode())set=D.sets.find(s=>s.mode===mode);filter='all';index=referenceMode()?0:positions[posKey()]||0;render()}
     if(b.dataset.factModule){factModule=b.dataset.factModule;render();$('filters').scrollIntoView({behavior:'smooth',block:'start'})}
+    if(b.dataset.showAnswer){const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll(`[data-answer-group="${b.dataset.showAnswer}"]`).forEach(el=>el.hidden=!show);b.setAttribute('aria-expanded',String(show));b.textContent=show?'Hide answer':'Show answer'}
     if(b.dataset.set){set=D.sets.find(s=>s.id===b.dataset.set);filter='all';index=positions[posKey()]||0;render()}
     if(b.dataset.filter){filter=b.dataset.filter;index=positions[posKey()]||0;render()}
     if(b.dataset.index!==undefined){index=Number(b.dataset.index);render()}

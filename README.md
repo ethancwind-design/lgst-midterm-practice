@@ -9,3 +9,5 @@ Main midterm scope: readings 001–015. Generated prompts, proposed answers, sou
 The Studocu and Trees tabs have been removed. The original Midterm PDF is preserved through full-size and download links, with all six pages also displayed as browser-compatible image previews. All provided source files are included under `sources/`.
 
 Current hosted site: https://lgst-midterm-practice.ethancwind.chatgpt.site
+
+Fact Patterns retains all supplied wording. Answers, calculations, and analytical notes start hidden and are revealed by 42 independent Show answer buttons.
